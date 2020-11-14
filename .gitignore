@@ -1,3 +1,4 @@
+client/node_modules
 service-1/node_modules
 service-2/node_modules
 .vscode
