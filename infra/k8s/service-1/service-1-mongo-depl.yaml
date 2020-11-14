@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+    name: service-1-mongo-depl
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: service-1-mongo
+    template:
+        metadata:
+            labels:
+                app: service-1-mongo
+        spec:
+            containers:
+                - name: service-1-mongo
+                  image: mongo
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+    name: service-1-mongo-srv
+spec:
+    type: ClusterIP
+    selector:
+        app: service-1-mongo
+    ports:
+        - name: service-1-mongo-db
+          protocol: TCP
+          port: 27017
+          targetPort: 27017 
