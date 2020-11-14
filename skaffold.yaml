@@ -1,0 +1,36 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+    kubectl:
+        manifests:
+            - ./infra/k8s/*
+build:
+    local:
+        push: false
+    artifacts:
+        - image: ruthvikc27/service-1
+          context: service-1
+          docker:
+            dockerfile: Dockerfile
+          sync: 
+            manual:
+                - src: 'src/**/*.js'
+                  dest: .
+        
+        - image: ruthvikc27/service-2
+          context: service-2
+          docker:
+            dockerfile: Dockerfile
+          sync: 
+            manual:
+                - src: 'src/**/*.js'
+                  dest: .
+
+        - image: ruthvikc27/client
+          context: client
+          docker:
+            dockerfile: Dockerfile
+          sync: 
+            manual:
+                - src: '**/*.js'
+                  dest: .
