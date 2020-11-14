@@ -11,10 +11,10 @@ spec:
     metadata:
       labels:
         app: service-2
-  spec:
-    containers:
-      - name: service-2
-        image: ruthvikc27/service-2
+    spec:
+      containers:
+        - name: service-2
+          image: ruthvikc27/service-2
 
 ---
 
