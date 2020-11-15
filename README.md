@@ -1,20 +1,20 @@
 # Given task -
 
-> Best for us to assess your abilities is build of a boilerplate
+- [x] Best for us to assess your abilities is build of a boilerplate
 
-> Node/Express/Mongo. It is a realistic scenario where of course OS is at your disposal and 
+- [x] Node/Express/Mongo. It is a realistic scenario where of course OS is at your disposal and 
 shows your abilities for seeing the big picture
 
-> So what is this going to be assessed on? What counts is how you work out a fitting structure that keeps in mind: 
+- [x] So what is this going to be assessed on? What counts is how you work out a fitting structure that keeps in mind: 
 production ready and of scale 20xCRUD
 
-> Considerations: microservices, scalability (load). A validation model should be there and think about organization of modules
+- [x] Considerations: microservices, scalability (load). A validation model should be there and think about organization of modules
 
-> Needless to say that everyone has a boilerplate he/she already uses to create
+- [x] Needless to say that everyone has a boilerplate he/she already uses to create
 
-> Still, taking it serious is advised since this alone will serve as a comparison to other candidates and determine shortlist or not
+- [x] Still, taking it serious is advised since this alone will serve as a comparison to other candidates and determine shortlist or not
 
-> It is a 48 hour submission so 16:00 IST Monday
+- [x] It is a 48 hour submission so 16:00 IST Monday
 
 # Description -
 
@@ -36,7 +36,10 @@ production ready and of scale 20xCRUD
 1. Easy development, management and scalability.
 1. Kubernetes deployments restart if the pods crash.
 
-**Microservice**
+**Microservices**
+
+*Assuming each microservice has its own database*
+
 Two types:
 1. Synchronous
 In this type one microservice can directly communicate to other microservice.
