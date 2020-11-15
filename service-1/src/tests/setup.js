@@ -1,17 +1,17 @@
-import { MongoMemoryServer } from 'mongodb-memory-server';
-import mongoose from 'mongoose';
-import { app } from '../app';
-import jwt from "jsonwebtoken";
+const { MongoMemoryServer } = require('mongodb-memory-server');
+const mongoose = require('mongoose');
+const { app } = require('../app');
+const jwt = require("jsonwebtoken");
 
 let mongo;
 
-declare global{
-  namespace NodeJS{
-    interface Global{
-      signin(): string[]
-    }
-  }
-}
+// declare global{
+//   namespace NodeJS{
+//     interface Global{
+//       signin(): string[]
+//     }
+//   }
+// }
 
 beforeAll(async () => {
   mongo = new MongoMemoryServer();
@@ -44,7 +44,7 @@ global.signin = () => {
     email: "test@test.com"
   }
   // Create the jwt
-  const token = jwt.sign(payload, process.env.JWT_KEY!);
+  const token = jwt.sign(payload, process.env.JWT_KEY);
 
   // Build a session object. { jwt: MY_JWT}
   const session = { jwt: token }
