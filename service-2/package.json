@@ -10,7 +10,8 @@
   "author": "ruthvikc27",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.14"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

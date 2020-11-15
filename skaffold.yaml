@@ -26,7 +26,7 @@ build:
                 - src: 'src/**/*.js'
                   dest: .
 
-        - image: ruthvikc27/client
+        - image: ruthvikc27/project-client
           context: client
           docker:
             dockerfile: Dockerfile
