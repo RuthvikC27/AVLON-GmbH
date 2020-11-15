@@ -14,16 +14,17 @@ router.get("/api/service1", (req, res) => {
         username: ""
     }
 
-    try {
-        const value = authModel.validate(req.body);
-        return res.send({
+    const value = authModel.validate(req.body);
+    if (value) {
+        return res.status(400).send({
             message: value
         })
-    } catch (err) {
-        return res.status(400).send({
-            message: error
-        });
     }
+
+    res.status(200).send({
+        message: "service1-api"
+    })
+
 });
 
 export default router;
