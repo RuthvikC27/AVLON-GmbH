@@ -3,6 +3,10 @@ import mongoose from 'mongoose';
 
 const app = express();
 
+// ROUTER
+import router from './routes';
+app.use(router);
+
 // LISTENING
 const PORT = 5000;
 app.listen(PORT, () => {
