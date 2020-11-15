@@ -20,7 +20,7 @@ production ready and of scale 20xCRUD
 
 **As this is just a boilerplate I made some things simple.**
 
-Technologies used - 
+**Technologies used -**
 * React JS
 * Node JS/ Express JS
 * Docker
@@ -31,7 +31,7 @@ Technologies used -
 > Docker containers and Kubernetes are used to achieve microservices architecture.
 > Ingress nginx is used for Load balancing.
 
-Advantages -
+**Advantages -**
 1. Other web frameworks or custom frameworks can be easily added as microservice. 
 1. Easy development, management and scalability.
 1. Kubernetes deployments restart if the pods crash.
