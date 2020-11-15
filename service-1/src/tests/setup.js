@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const { app } = require('../app');
 const jwt = require("jsonwebtoken");
 
+
+// ADD below package to package.json FOR TESTING 
+// "mongodb-memory-server": "^6.9.2",
+
 let mongo;
 
 // declare global{
