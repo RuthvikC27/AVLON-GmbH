@@ -10,11 +10,11 @@ spec:
         - host: project.dev
           http: 
             paths:
-                - path: /api/service1/?(.*)
+                - path: /api/service-1/?(.*)
                   backend: 
                     serviceName: service-1-srv
                     servicePort: 5000
-                - path: /api/service2/?(.*)
+                - path: /api/service-2/?(.*)
                   backend: 
                     serviceName: service-2-srv
                     servicePort: 5000
