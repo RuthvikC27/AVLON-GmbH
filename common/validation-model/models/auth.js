@@ -10,7 +10,6 @@ const schema = Joi.object({
         password: Joi.string()
             .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
 
-        repeat_password: Joi.ref('password'),
 
         email: Joi.string()
             .email({
@@ -20,7 +19,5 @@ const schema = Joi.object({
                 }
             })
     })
-    .with('username')
-    .with('password', 'repeat_password');
 
 module.exports = schema;
