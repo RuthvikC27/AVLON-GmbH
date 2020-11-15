@@ -36,20 +36,20 @@ production ready and of scale 20xCRUD
 1. Easy development, management and scalability.
 1. Kubernetes deployments restart if the pods crash.
 
-**Microservices**
+## Microservices
 
 *Assuming each microservice has its own database*
 
-Two types:
-1. Synchronous
+**Two types:**
+1. **Synchronous** 1
 In this type one microservice can directly communicate to other microservice.
 The major downside to this approach is if one service get crashed the other services depending on it may crash too.
 
-1. Asynchronous
-Two methods: 
-  1. In the method 1, a microservice can send request throgh event bus. In this the downside is if one service gets crashed the other services depending on it may not work correctly but they don't get crashed.
+1. **Asynchronous** 2
+**Two methods: **
+  1. In the method 1, a microservice can send request throgh event bus. In this the downside is if one service gets crashed the other services depending on it may not work correctly but they don't get crashed. 1
 
-  1. Method 2 is similar to method 1 but with a slight change. Assume 2 services, instead of request data directly from service 2, service 1 stores the data when the events happened in service 2 before. In this there is data duplication but now a days storage is very cheap. The main advantage here is if one service goes down other services can work correctly.
+  1. Method 2 is similar to method 1 but with a slight change. Assume 2 services, instead of request data directly from service 2, service 1 stores the data when the events happened in service 2 before. In this there is data duplication but now a days storage is very cheap. The main advantage here is if one service goes down other services can work correctly. 2
 
 > Common sharable code is achieved by publishing code to NPM and then installing as a dependency in microservices. I think this is the best way to organize sharable code. Sharable code such as Validation models, error handling, and authentication etc can be published to NPM or in the common folder.
 
