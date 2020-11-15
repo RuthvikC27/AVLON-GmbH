@@ -41,11 +41,11 @@ production ready and of scale 20xCRUD
 *Assuming each microservice has its own database*
 
 **Two types:**
-1. **Synchronous** 1
+**Synchronous** 
 In this type one microservice can directly communicate to other microservice.
 The major downside to this approach is if one service get crashed the other services depending on it may crash too.
 
-1. **Asynchronous** 2
+**Asynchronous** 
 **Two methods: **
   1. In the method 1, a microservice can send request throgh event bus. In this the downside is if one service gets crashed the other services depending on it may not work correctly but they don't get crashed  2a
 
