@@ -13,3 +13,6 @@ Needless to say that everyone has a boilerplate he/she already uses to create
 Still, taking it serious is advised since this alone will serve as a comparison to other candidates and determine shortlist or not
 
 It is a 48 hour submission so 16:00 IST Monday
+
+<!-- MONGODB FOR TESTING -->
+"mongodb-memory-server": "^6.9.2",
