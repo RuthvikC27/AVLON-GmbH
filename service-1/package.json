@@ -10,6 +10,7 @@
   "author": "ruthvikc27",
   "license": "ISC",
   "dependencies": {
+    "@rc27/validation-model": "^1.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.10.14"
   },
