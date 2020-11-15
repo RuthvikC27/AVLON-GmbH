@@ -28,7 +28,7 @@ production ready and of scale 20xCRUD
 * Ingress nginx
 * Skaffold
 
-> Docker containers and Kubernetes are used to achieve microservices architecture.
+> Docker containers and Kubernetes are used to achieve microservice architecture.
 > Ingress nginx is used for Load balancing.
 
 **Advantages -**
