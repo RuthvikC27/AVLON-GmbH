@@ -49,7 +49,7 @@ The major downside to this approach is if one service get crashed the other serv
 **Two methods:**
   1. In the method 1, a microservice can send request throgh event bus. In this the downside is if one service gets crashed the other services depending on it may not work correctly but they don't get crashed  
 
-  1. Method 2 is similar to method 1 but with a slight change. Assume 2 services, instead of request data directly from service 2, service 1 stores the data when the events happened in service 2 before. In this there is data duplication but now a days storage is very cheap. The main advantage here is if one service goes down other services can work correctly 
+  1. Method 2 is similar to method 1 but with a slight change. Assuming 2 services, service 1 instead of request data directly from service 2, service 1 stores all the necessary data for the each event happened in service 2. Even if service 2 goes down service 1 can work without any problem. Vice versa for service 2. In this there is data duplication but now a days storage is very cheap. The main advantage here is if one service goes down other services can work without any problem.
 
 > Common sharable code is achieved by publishing code to NPM and then installing as a dependency in microservices. I think this is the best way to organize sharable code. Sharable code such as Validation models, error handling, and authentication etc can be published to NPM or in the common folder.
 
