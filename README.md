@@ -55,7 +55,7 @@ The major downside to this approach is if one service get crashed the other serv
 
   1. Method 2 is similar to method 1 but with a slight change. Assuming 2 services, service 1 instead of request data directly from service 2, service 1 stores all the necessary data for the each event happened in service 2. Even if service 2 goes down service 1 can work without any problem. Vice versa for service 2. In this there is data duplication but now a days storage is very cheap. The main advantage here is if one service goes down other services can work without any problem.
 
-## OTHER STUFF
+<!-- ## OTHER STUFF
 
 ```kops create cluster \
 --state=${KOPS_STATE_STORE} \
@@ -68,5 +68,5 @@ The major downside to this approach is if one service get crashed the other serv
 --master-count 1```
 
 > us-east-2a,us-east-2b
-> ap-south-1a, ap-south-1b
+> ap-south-1a, ap-south-1b -->
 
