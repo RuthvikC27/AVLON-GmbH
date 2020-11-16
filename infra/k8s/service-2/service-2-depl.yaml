@@ -15,6 +15,15 @@ spec:
       containers:
         - name: service-2
           image: ruthvikc27/service-2
+          env: 
+            - name: MONGO_URI
+              value: mongodb://service-2-mongo-srv:27017/service-2
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                    name: jwt-secret
+                    key: JWT_KEY
+         
 
 ---
 

@@ -13,12 +13,13 @@ function Service1(){
                 setMessage(res.data.message);
             })
             .catch(err => {
-                setMessage(JSON.stringify(err.response.data.message));
+                setMessage(JSON.stringify("Validation error"));
             })
     })
 
     return <div>
-        { message }
+        <h1>Service 1 message</h1>
+        <p>{ message }</p>
     </div>
 }
 

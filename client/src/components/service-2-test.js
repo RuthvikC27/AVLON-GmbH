@@ -4,8 +4,8 @@ import React, {
 } from 'react';
 import axios from 'axios';
 
-function Service2(){
-    const [ message, setMessage ] = useState('');
+function Service2() {
+    const [message, setMessage] = useState('');
 
     useEffect(() => {
         axios.get("/api/service2")
@@ -18,7 +18,8 @@ function Service2(){
     })
 
     return <div>
-        { message }
+        <h1>Service 2 message</h1>
+        <p>{message}</p>
     </div>
 
 }

@@ -4,7 +4,7 @@ import { app } from './app';
 // LISTENING
 const PORT = 5000;
 app.listen(PORT, () => {
-    mongoose.connect("mongodb://service-1-mongo-srv:27017/service-1", {
+    mongoose.connect(process.env.MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true

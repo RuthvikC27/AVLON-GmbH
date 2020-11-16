@@ -27,6 +27,9 @@ production ready and of scale 20xCRUD
 * Kubernetes
 * Ingress-nginx
 * Skaffold
+* MongoDB
+
+*MongoDB is just used for connection to it*
 
 > Docker containers and Kubernetes are used to achieve microservice architecture.
 > Ingress-nginx is an Ingress controller for Kubernetes using NGINX as a reverse proxy and load balancer.
@@ -40,6 +43,17 @@ production ready and of scale 20xCRUD
 > Common sharable code is achieved by publishing code to NPM and then installing as a dependency in microservices. I think this is the best way to organize sharable code. Sharable code such as Validation models, error handling, and authentication etc can be published to NPM or in the common folder.
 
 > I created an organization in NPM and named it "rc27" and added package name "validation-model". I have create a simple validation model named authModel. In service 1 I have installed @rc27/validation-model as a dependency and in routes index file I have used it.
+
+# Prerequisites
+
+1. Node, Npm, React, Docker, kubernetes and ingress-nginx must be installed.
+1. Skaffold should be installed or can manually start deployments and services in "infra/k8s" folder.
+
+# Start development
+
+1. Containarize all the services.
+1. skaffold dev (Starts all deployments)
+1. skaffold delete (to delete all the deployments)
 
 ## About microservices
 
@@ -55,6 +69,8 @@ The major downside to this approach is if one service get crashed the other serv
   1. In the method 1, a microservice can send request through event bus. In this the downside is if one service gets crashed the other services depending on it may not work correctly but they don't get crashed  
 
   1. Method 2 is similar to method 1 but with a slight change. Assuming 2 services, service 1 instead of request data directly from service 2, service 1 stores all the necessary data for the each event happened in service 2. Even if service 2 goes down service 1 can work without any problem. Vice versa for service 2. In this there is data duplication but now a days storage is very cheap. The main advantage here is if one service goes down other services can work without any problem.
+
+
 
 <!-- ## OTHER STUFF
 
