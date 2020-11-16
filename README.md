@@ -18,7 +18,7 @@ production ready and of scale 20xCRUD
 
 # Description -
 
-**As this is just a boilerplate I made some things simpler.**
+**As this is just a boilerplate I have made much simpler.**
 
 **Technologies used -**
 * React JS
