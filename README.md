@@ -1,4 +1,4 @@
-# Given task -
+<!-- # Given task -
 
 - [x] Best for us to assess your abilities is build of a boilerplate
 
@@ -14,7 +14,7 @@ production ready and of scale 20xCRUD
 
 - [x] Still, taking it serious is advised since this alone will serve as a comparison to other candidates and determine shortlist or not
 
-- [x] It is a 48 hour submission so 16:00 IST Monday
+- [x] It is a 48 hour submission so 16:00 IST Monday -->
 
 # Description -
 
@@ -36,7 +36,11 @@ production ready and of scale 20xCRUD
 1. Easy development, management and scalability.
 1. Kubernetes deployments restart if the pods crash.
 
-## Microservices
+# Organizing node modules
+> Common sharable code is achieved by publishing code to NPM and then installing as a dependency in microservices. I think this is the best way to organize sharable code. Sharable code such as Validation models, error handling, and authentication etc can be published to NPM or in the common folder.
+> I created an organization in NPM and named it "rc27" and added package name "validation-model". I have create a simple validation model named authModel. In service 1 I have installed @rc27/validation-model as a dependency and in routes index file I have used it.
+
+## About microservices
 
 *Assuming each microservice has its own database*
 
@@ -50,10 +54,6 @@ The major downside to this approach is if one service get crashed the other serv
   1. In the method 1, a microservice can send request throgh event bus. In this the downside is if one service gets crashed the other services depending on it may not work correctly but they don't get crashed  
 
   1. Method 2 is similar to method 1 but with a slight change. Assuming 2 services, service 1 instead of request data directly from service 2, service 1 stores all the necessary data for the each event happened in service 2. Even if service 2 goes down service 1 can work without any problem. Vice versa for service 2. In this there is data duplication but now a days storage is very cheap. The main advantage here is if one service goes down other services can work without any problem.
-
-> Common sharable code is achieved by publishing code to NPM and then installing as a dependency in microservices. I think this is the best way to organize sharable code. Sharable code such as Validation models, error handling, and authentication etc can be published to NPM or in the common folder.
-
-> Scaling servers - Horizontal or Vertical
 
 ## OTHER STUFF
 
