@@ -40,9 +40,9 @@ production ready and of scale 20xCRUD
 1. Kubernetes deployments restart automatically if the pods crash.
 
 # Organizing node modules
-> Common sharable code is achieved by publishing code to NPM and then installing as a dependency in microservices. I think this is the best way to organize sharable code. Sharable code such as Validation models, error handling, and authentication etc can be published to NPM or in the common folder.
+> Common sharable code is achieved by publishing code to NPM and then installing as a dependency in microservices. I think this is the best way to organize sharable code. Sharable code such as Validation models, error handling, and authentication etc can be published to NPM or just putting in the common folder and importing it from the services.
 
-> I created an organization in NPM and named it "rc27" and added package name "validation-model". I have create a simple validation model named authModel. In service 1 I have installed @rc27/validation-model as a dependency and in routes index file I have used it.
+> I created an organization in NPM and named it "rc27" and added package name "validation-model". I have created a simple validation model named authModel. In service 1 I have installed @rc27/validation-model as a dependency and in routes index file I have used it.
 
 # Prerequisites
 
