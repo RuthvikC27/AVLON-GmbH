@@ -18,18 +18,18 @@ production ready and of scale 20xCRUD
 
 # Description -
 
-**As this is just a boilerplate I made some things simple.**
+**As this is just a boilerplate I made some things simpler.**
 
 **Technologies used -**
 * React JS
 * Node JS/ Express JS
 * Docker
 * Kubernetes
-* Ingress nginx
+* Ingress-nginx
 * Skaffold
 
 > Docker containers and Kubernetes are used to achieve microservice architecture.
-> Ingress nginx is used for Load balancing.
+> Ingress-nginx is an Ingress controller for Kubernetes using NGINX as a reverse proxy and load balancer.
 
 **Advantages -**
 1. Other web frameworks or custom frameworks can be easily added as microservice. 
